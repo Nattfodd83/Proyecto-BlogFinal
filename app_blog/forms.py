@@ -1,6 +1,6 @@
 from django import forms
 
-class PostsForm(forms.Form):
+class PostForm(forms.Form):
 
     title = forms.CharField(max_length=40)
     subtitle = forms.CharField(max_length=40)

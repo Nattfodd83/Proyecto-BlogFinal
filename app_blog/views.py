@@ -14,35 +14,35 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 def home(request):
     
-    posts = Posts.objects.all()
+    posts = Post.objects.all()
 
     return render(request, 'app_blog/home.html', {"title": "Home", "message": "Título del blog", "posts": posts})
 
 class PostsList(ListView):
 
-    model = Posts
+    model = Post
     template_name = "app_blog/posts_list.html"
 
 class PostDetail(DetailView):
 
-    model = Posts
+    model = Post
     template_name = "app_blog/posts_detail.html"
 
 class PostCreate(CreateView):
 
-    model = Posts
+    model = Post
     success_url = "/pages/"
     fields = ['title', 'subtitle', 'body', 'author', 'date', 'image']
 
 class PostUpdate(UpdateView):
 
-    model = Posts
+    model = Post
     success_url = "/pages/"
     fields = ['title', 'subtitle', 'body']
 
 class PostDelete(DeleteView):
 
-    model = Posts
+    model = Post
     success_url = "/pages/"
 
 def about(request):

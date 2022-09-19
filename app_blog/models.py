@@ -3,7 +3,7 @@ from datetime import datetime
 
 # Create your models here.
 
-class Posts(models.Model):
+class Post(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=40)
     subtitle = models.CharField(max_length=40)
