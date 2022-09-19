@@ -16,7 +16,7 @@ def home(request):
     
     posts = Post.objects.all()
 
-    return render(request, 'app_blog/home.html', {"title": "Home", "message": "Título del blog", "posts": posts})
+    return render(request, 'app_blog/home.html', {})
 
 class PostsList(ListView):
 
