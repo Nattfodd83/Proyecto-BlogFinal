@@ -1,0 +1,37 @@
+{% extends 'app_blog/base.html' %}
+
+{% block header %}
+
+{% load static %}
+
+<header class="masthead" style="background-image: url({% static 'app_blog/assets/img/about-bg.jpg' %})">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>{{title}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% endblock header %}
+
+{% block main_content %}
+
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <p> Creadores del Proyecto: Ezequiel Bargas y Ezequiel Pena Adarraga.</p>
+                <p> Ezequiel Bargas: Es para mi un gusto presentarles este proyecto. Mi nombre es Ezequiel Martin Bargas, mis aportes a este proyecto fueron: register, login y logout. Parte del codigo de menssage, profile y test.
+                    Quiero recalcar la inmensa ayuda que represento mi compañero Ezequiel Pena quien aporto demasiado al proyecto debido a mis problemas laborales y personales. Sin la disposicion y esfuerzo de el no creo que poder presentar este proyecto.</p>
+                <p> Mi nombre Ezequiel Pena Adarraga tengo 39 años, tengo algo de experiencia previa en programacion y decidi tomar este curso para ponerme al dia. Mis aportes a este proyecto fueron: ProyectoBlog: settings urls, app_blog completa, app_acounts: urls, parte de templates, app_messages: urls y parte de templates</p>   
+                <p> La idea de este proyecto fue armar una web tipo blog por lo que utlizamos la plantilla bootstrap "Clean Blog" de startboostrap.com.</p>
+            </div>
+        </div>
+    </div>
+</article>
+
+{% endblock main_content %}
