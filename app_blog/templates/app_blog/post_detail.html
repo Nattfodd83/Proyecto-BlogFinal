@@ -28,7 +28,7 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>{{post.body}}</p>
+                <p>{{post.body|safe}}</p>
                 {% if request.user.is_authenticated %}
                 <a href="{%url 'Update' post.id%}" class="btn btn-success">Editar</a>
                 <a href="{%url 'Delete' post.id%}" class="btn btn-danger">Borrar</a>

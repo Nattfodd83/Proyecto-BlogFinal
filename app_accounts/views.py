@@ -71,8 +71,6 @@ def update_user(request):
             data = form.cleaned_data
             user.name = data["name"]
             user.email = data["email"]
-            user.password1 = data["password1"]
-            user.password2 = data["password2"]
             user.save()
             return redirect("Home")
         else:
