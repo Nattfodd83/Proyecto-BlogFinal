@@ -8,7 +8,7 @@ from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
-# Django authentication
+# Authentication
 
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate
@@ -48,7 +48,7 @@ def login_request(request):
 
             if user is not None:
                 login(request, user)
-                return render(request, 'app_blog/home.html', {"title": "Home", "message": f"¡Bienvenidx {user}!"})
+                return render(request, 'app_blog/home.html', {"title": "Home", "message": f"¡Bienvenido/a {user}!"})
             else:
                 return render(request, 'app_blog/home.html', {"title": "Home", "message": "Error", "errors": [f"El usuario {user} no existe"]})
         
