@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from app_accounts.models import *
 from app_accounts.forms import *
 
+
 # CVB
 
 from django.views.generic import ListView
@@ -59,6 +60,7 @@ def login_request(request):
         form = AuthenticationForm()
         return render(request, 'app_accounts/login.html', {"form": form})
 
+
 @login_required()
 def update_user(request):
 
@@ -71,6 +73,8 @@ def update_user(request):
             data = form.cleaned_data
             user.name = data["name"]
             user.email = data["email"]
+            user.password1 = data["password1"]
+            user.password2 = data["password2"]
             user.save()
             return redirect("Home")
         else:

@@ -24,9 +24,12 @@
 <div class="row gx-4 gx-lg-5 justify-content-center">
     <div class="col-md-10 col-lg-8 col-xl-7">
         <div class="container mt-5">
-            <p>{{post.body|safe}}</p>
-            <p>{{post.body|safe}}</p><p>{{post.body|safe}}</p><p>{{post.body|safe}}</p>
-            <a href="{% url 'update_user' %}" class="btn btn-success">Update informacion</a>
+            <p>Usuario: {{user.username}}</p>
+            <p>Nombre: {{user.first_name}}</p>
+            <p>Apellido: {{user.last_name}}</p>
+            <p>Email: {{user.email}}</p>
+            <p>Contraseña: {{user.password}}</p>
+                        <a href="{% url 'update_user' %}" class="btn btn-success">Update informacion</a>
             {% if request.user.is_superuser %}
             <a href="{% url 'upload_avatar' %}" class=" btn btn-success">Cargar avatar</a>
             {% endif %}
@@ -36,3 +39,4 @@
 </div>
 
 {% endblock main_content %}
+
