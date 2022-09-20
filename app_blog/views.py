@@ -26,7 +26,7 @@ class PostsList(ListView):
 class PostDetail(DetailView):
 
     model = Post
-    template_name = "app_blog/posts_detail.html"
+    template_name = "app_blog/post_detail.html"
 
 class PostCreate(CreateView):
 
