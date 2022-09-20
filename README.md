@@ -1,5 +1,9 @@
 # ProyectoBlog
 
+Creado por:
++ Ezequiel Martin Bargas: Mis aportes a este proyecto fueron: register, login y logout. Parte del codigo de menssage, profile y test.
++ Ezequiel Mariano Pena Adarraga: Mis aportes a este proyecto fueron: ProyectoBlog: media, requirements, readme, gitignore, settings generales, urls genereales, app_blog completa, app_acounts: urls, parte de templates, app_messages: urls y parte de templates.
+
 ## Instrucciones instalar proyecto en local
 + Crea una carpeta contenedora madre
 + Abre la consola y ubicate en la carpeta madre
@@ -12,12 +16,10 @@
 pip install -r requirements.txt
 ```
 
-## Instrucciones para entrar al panel aministrativo de Django
-+ En consola, crear un superuser:
-```
-python manage.py createsuperuser
-```
+## Instrucciones para entrar al panel aministrativo 
 + Acceder con user y password via:
 ```
 127.0.0.1:8000/admin
 ```
++ Usuario: admin
++ Contraseña: 123456

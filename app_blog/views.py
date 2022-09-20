@@ -21,7 +21,7 @@ def home(request):
 class PostsList(ListView):
 
     model = Post
-    template_name = "app_blog/posts_list.html"
+    template_name = "app_blog/post_list.html"
 
 class PostDetail(DetailView):
 
