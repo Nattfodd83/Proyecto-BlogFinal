@@ -32,7 +32,7 @@ class PostCreate(CreateView):
 
     model = Post
     success_url = "/pages/"
-    fields = ['title', 'subtitle', 'body', 'author', 'date', 'image']
+    fields = ['title', 'subtitle', 'body', 'author', 'date']
 
 class PostUpdate(UpdateView):
 
