@@ -7,6 +7,7 @@ class UserRegistrationForm(UserCreationForm):
     password1 = forms.CharField(label="Contraseña", widget=forms.PasswordInput)
     password2 = forms.CharField(label="Repita la contraseña", widget=forms.PasswordInput)
     
+    
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
@@ -18,10 +19,11 @@ class UserEditForm(UserCreationForm):
     email = forms.EmailField(label="Email")
     password1 = forms.CharField(label="Contraseña", widget=forms.PasswordInput)
     password2 = forms.CharField(label="Repita la contraseña", widget=forms.PasswordInput)
+    red_social = forms.URLField (label="Red Social")
 
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'email', 'password1', 'password2']
+        fields = ['first_name', 'last_name', 'email', 'password1', 'password2', 'red_social']
         help_texts = {k:"" for k in fields}
 
 

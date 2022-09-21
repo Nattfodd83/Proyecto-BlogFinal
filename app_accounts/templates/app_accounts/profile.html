@@ -28,7 +28,7 @@
             <p>Nombre: {{user.first_name}}</p>
             <p>Apellido: {{user.last_name}}</p>
             <p>Email: {{user.email}}</p>
-            <p>Contraseña: {{user.password}}</p>
+            <p>Red Social: {{user.red_social}}</p>            
             <a href="{% url 'update_user' %}" class="btn btn-success">Update informacion</a>
             {% if request.user.is_superuser %}
             <a href="{% url 'upload_avatar' %}" class=" btn btn-success">Cargar avatar</a>

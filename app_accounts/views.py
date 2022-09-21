@@ -76,6 +76,7 @@ def update_user(request):
             user.email = data["email"]
             user.password1 = data["password1"]
             user.password2 = data["password2"]
+            user.red_social = data["red_social"]
             user.save()
             return redirect("Home")
         else:
