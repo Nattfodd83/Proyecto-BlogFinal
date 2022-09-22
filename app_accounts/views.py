@@ -54,7 +54,7 @@ def login_request(request):
                 return render(request, 'app_blog/home.html', {"title": "Home", "message": "Error", "errors": [f"El usuario {user} no existe"]})
         
         else:
-            return render(request, 'app_blog/home.html', {"title": "Home", "message": "Anonymous", "errors": ["Revise los datos indicados"]})
+            return render(request, 'app_blog/home.html', {"title": "Home", "message": "Anonymous", "errors": ["Revise los datos ingresados"]})
 
     else:
         form = AuthenticationForm()

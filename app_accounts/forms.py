@@ -6,7 +6,7 @@ class UserRegistrationForm(UserCreationForm):
     email = forms.EmailField(label="Email")
     password1 = forms.CharField(label="Contraseña", widget=forms.PasswordInput)
     password2 = forms.CharField(label="Repita la contraseña", widget=forms.PasswordInput)
-    
+        
     
     class Meta:
         model = User
@@ -19,7 +19,7 @@ class UserEditForm(UserCreationForm):
     email = forms.EmailField(label="Email")
     password1 = forms.CharField(label="Contraseña", widget=forms.PasswordInput)
     password2 = forms.CharField(label="Repita la contraseña", widget=forms.PasswordInput)
-    red_social = forms.URLField (label="Red Social")
+    red_social = forms.CharField (label="Red Social")
 
     class Meta:
         model = User
