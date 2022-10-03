@@ -13,8 +13,8 @@ class Avatar(models.Model):
 
 class Perfil(models.Model):
     user= models.OneToOneField(User, on_delete=models.CASCADE)
-    red_social=models.URLField()
-    descripcion=models.TextField()
+    red_social=models.URLField(blank=True)
+    descripcion=models.TextField(blank=True)
 
     def __str__(self):
         return self.user.username

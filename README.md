@@ -1,4 +1,6 @@
 # ProyectoBlog
+## Link al Video de presentacion
++ https://www.awesomescreenshot.com/video/11480860?key=b9915f43762a92d56a4d417dd642a9e9
 
 Creado por:
 + Ezequiel Martin Bargas: Mis aportes a este proyecto fueron: Parte del codigo de views de register, login y logout. Views de menssage y tests en su totalidad .
