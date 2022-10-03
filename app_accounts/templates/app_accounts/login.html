@@ -38,7 +38,9 @@
             <span class="help-block">{{ error }}</span>
             {% endfor %}
         </div>
-        {% endfor %}
+        {% endfor %} 
+        <input type="hidden" name="next" value="{{ request.GET.next }}"/>
+  
 
         <div class="container mt-5">
             <p>

@@ -1,0 +1,38 @@
+{% extends 'app_blog/base.html' %}
+
+
+{% block header %}
+
+{% load static %}
+
+<header class="masthead" style="background-image: url({% static 'app_blog/assets/img/post-bg.jpg' %})">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1>Editar Post</h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% endblock header %}
+{% load widget_tweaks %}
+
+{% block main_content %}
+<div class="container mt-5">
+    <form method="post">
+        {% csrf_token %}  
+        {{ form.media }}
+        {{ form.as_p }}
+            <button type="submit" class="btn btn-success">
+                <span class="glyphicon glyphicon-ok"></span>Guardar Cambios
+            </button>
+                <a href="{% url 'Posts' %}" class="btn btn-default">Cancelar</a>
+        
+    </form>
+</div>
+
+{% endblock main_content %}

@@ -2,18 +2,10 @@ from django.shortcuts import render, redirect
 from app_accounts.models import *
 from app_accounts.forms import *
 
-
-# CVB
-
-from django.views.generic import ListView
-from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-
 # Authentication
 
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -36,26 +28,21 @@ def register_request(request):
         return render(request, 'app_accounts/register.html', {"form": form})
 
 def login_request(request):
-
+    
     if  request.method == "POST":
-
         form = AuthenticationForm(request, data=request.POST)
-
         if form.is_valid():
             data = form.cleaned_data
             username = data.get('username')
             password = data.get('password')
             user = authenticate(username=username, password=password)
-
             if user is not None:
-                login(request, user)
-                return render(request, 'app_blog/home.html', {"title": "Home", "message": f"¡Bienvenido/a {user}!"})
+                login(request, user)           
+                return  render(request, "app_blog/home.html", {"title": "Home", "message": f"¡Bienvenido/a {user}!"})
             else:
-                return render(request, 'app_blog/home.html', {"title": "Home", "message": "Error", "errors": [f"El usuario {user} no existe"]})
-        
+                return render(request, 'app_blog/home.html', {"title": "Home", "message": "Error", "errors": [f"El usuario {username} no existe"]})        
         else:
             return render(request, 'app_blog/home.html', {"title": "Home", "message": "Anonymous", "errors": ["Revise los datos ingresados"]})
-
     else:
         form = AuthenticationForm()
         return render(request, 'app_accounts/login.html', {"form": form})
@@ -76,7 +63,6 @@ def update_user(request):
             user.email = data["email"]
             user.password1 = data["password1"]
             user.password2 = data["password2"]
-            user.red_social = data["red_social"]
             user.save()
             return redirect("Home")
         else:

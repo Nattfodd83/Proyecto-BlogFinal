@@ -1,8 +1,8 @@
 # ProyectoBlog
 
 Creado por:
-+ Ezequiel Martin Bargas: Mis aportes a este proyecto fueron: register, login y logout. Parte del codigo de menssage, profile y test.
-+ Ezequiel Mariano Pena Adarraga: Mis aportes a este proyecto fueron: ProyectoBlog: media, requirements, readme, gitignore, settings generales, urls genereales, app_blog completa, app_acounts: urls, parte de templates, app_messages: urls y parte de templates.
++ Ezequiel Martin Bargas: Mis aportes a este proyecto fueron: Parte del codigo de views de register, login y logout. Views de menssage y tests en su totalidad .
++ Ezequiel Mariano Pena Adarraga: Mis aportes a este proyecto fueron: ProyectoBlog: media, requirements, readme, gitignore, settings generales, urls genereales, app_blog completa, app_acounts: parte del codigo de views, forms, models,urls, templates, app_messages: forms, models, urls y templates.
 
 ## Instrucciones instalar proyecto en local
 + Crea una carpeta contenedora madre

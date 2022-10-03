@@ -16,7 +16,7 @@ def home(request):
     
     posts = Post.objects.all()
 
-    return render(request, 'app_blog/home.html', {"title": "Home", "message": "Título del blog", "posts": posts})
+    return render(request, 'app_blog/home.html', {"title": "Home", "message": "Blog de los Ezequieles", "posts": posts})
 
 class PostsList(ListView):
 
@@ -37,6 +37,7 @@ class PostCreate(CreateView):
 class PostUpdate(UpdateView):
 
     model = Post
+    template_name = "app_blog/post_update.html"
     success_url = "/pages/"
     fields = ['title', 'subtitle', 'body']
 
